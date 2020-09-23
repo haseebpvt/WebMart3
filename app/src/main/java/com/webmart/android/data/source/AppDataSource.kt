@@ -1,3 +1,9 @@
 package com.webmart.android.data.source
 
-interface AppDataSource
+import com.android.webmart.data.Result
+import com.webmart.android.data.model.Shop
+
+interface AppDataSource {
+
+    suspend fun loadShopsList(): Result<Shop>
+}
